@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-soil-analyzer"
+version = "0.1.0"
+description = "Production-grade soil intelligence engine with actionable crop recommendations"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Smart Soil Team" }
+]
+license = { text = "MIT" }
+keywords = ["soil", "agriculture", "analytics", "decision-support"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0"
+]
+
+[project.scripts]
+soil-analyzer = "smart_soil_analyzer.main:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
