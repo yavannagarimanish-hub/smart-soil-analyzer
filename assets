@@ -1,1 +1,8 @@
-product documentation coming soon 
+# Asset Plan
+
+No binary assets are committed in this baseline.
+
+Planned assets:
+- architecture diagram (`assets/architecture.svg`)
+- CLI usage flow (`assets/cli-flow.png`)
+- sample dashboard mockups for field operators

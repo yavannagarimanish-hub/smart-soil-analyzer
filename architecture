@@ -1,1 +1,17 @@
-product documentation coming soon 
+# Architecture Notes
+
+## Layers
+1. **Domain**: immutable entities + validation (`SoilReading`, `CropRecommendation`).
+2. **Service**: recommendation policies (`SoilRecommendationService`).
+3. **Interfaces**: CLI adapter for user interaction and machine integration.
+4. **Config**: thresholds isolated for safe tuning and extension.
+
+## Design Decisions
+- **SOLID-first**: recommendation logic is isolated from I/O.
+- **Replaceable interfaces**: CLI can be complemented by API or MQTT adapters.
+- **Safety-first validation**: domain boundary catches invalid sensor payloads.
+
+## Extension Patterns
+- Add `interfaces/api.py` for REST endpoints.
+- Add `services/calibration.py` for per-crop threshold loading.
+- Add `domain/events.py` for telemetry/event sourcing.

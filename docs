@@ -1,1 +1,11 @@
-#product documentation coming soon 
+# Documentation Backlog
+
+## Completed in this baseline
+- Production-ready package layout.
+- CLI usage documentation.
+- Validation and recommendation test coverage.
+
+## Next documentation steps
+- Device integration guide for sensor firmware teams.
+- Regional agronomy tuning handbook.
+- API contract (OpenAPI) once web interface is introduced.
